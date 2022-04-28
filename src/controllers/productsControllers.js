@@ -1,6 +1,10 @@
 const getAllproducts = (req, res)=>{
-    res.send('Esto devuelve todos los registros')
+    res.render('pages/index')
 
 }
 
-module.exports = getAllproducts
+const getProductsbyId =(req,res)=>{
+    res.render('pages/products')
+}
+
+module.exports = {getAllproducts, getProductsbyId}
