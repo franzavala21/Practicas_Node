@@ -1,6 +1,25 @@
+const databaseConnection = require("../../config/database")
+
 const getAllproducts = (req, res)=>{
-    res.send('Esto devuelve todos los registros')
+    databaseConnection.query('SELECT * FROM products', (error, data) =>{
+        if (error) {
+            console.log(error)
+
+        }else {
+            res.render('pages/products', {
+            products: data
+            })
+        }
+
+    }) //Consulto la base de datos
+
+    
 
 }
 
-module.exports = getAllproducts
+const getProductsbyId =(req,res)=>{
+    res.render('pages/products')
+}
+
+
+module.exports = {getAllproducts, getProductsbyId}

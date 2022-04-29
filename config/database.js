@@ -4,7 +4,7 @@ const mysql2 = require('mysql2');
 const databaseConnection = mysql2.createConnection({
     host: 'localhost',
     user: 'root',
-    database: 'heladeria'
+    database: 'repaso_nodejs'
 })
 
 databaseConnection.connect((error)=>{
