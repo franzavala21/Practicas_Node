@@ -1,7 +1,7 @@
 const databaseConnection = require("../../config/database")
 
 const getAllproducts = (req, res)=>{
-    databaseConnection.query('SELECT * FROM products', (error, data) =>{
+    databaseConnection.query('SELECT * FROM node_productos', (error, data) =>{
         if (error) {
             console.log(error)
 
